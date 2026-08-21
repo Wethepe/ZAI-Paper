@@ -206,13 +206,32 @@
         "2607.05378",
         "2607.07508",
         "2607.11185",
+        "2607.21893",
         "2607.25380",
-        "2608.01460"
+        "2608.01460",
+        "2608.07641",
+        "2608.10402"
       ],
       "bootstrapped": true,
-      "delivered": {},
+      "delivered": {
+        "2607.21893": {
+          "delivered_at": "2026-08-21T08:43:25Z",
+          "message_id": "om_x100b67b4b41f80a8b26dc9d93c63281",
+          "seq": 1
+        },
+        "2608.07641": {
+          "delivered_at": "2026-08-21T08:43:25Z",
+          "message_id": "om_x100b67b4b41f80a8b26dc9d93c63281",
+          "seq": 2
+        },
+        "2608.10402": {
+          "delivered_at": "2026-08-21T08:43:25Z",
+          "message_id": "om_x100b67b4b41f80a8b26dc9d93c63281",
+          "seq": 3
+        }
+      },
       "target_fingerprint": "bffdda1af3704bd8a537f328fd0c548a4d4ce356caececf7a48364463dc0343d",
-      "updated_at": "2026-08-21T08:23:56Z"
+      "updated_at": "2026-08-21T08:43:25Z"
     }
   },
   "version": 1
