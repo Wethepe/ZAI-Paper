@@ -1,6 +1,6 @@
 {
   "summary": {
-    "updated_at": "2026-08-21T07:44:46.372932+00:00",
+    "updated_at": "2026-08-21T07:50:25.264926+00:00",
     "final_count": 208,
     "product_related": 30,
     "product_support": 17,
@@ -12,12 +12,12 @@
       "arxiv_id": "2608.10402",
       "title": "TideRL: Boosting Agentic RL Goodput with Readiness-Aware Scheduling",
       "authors": "Yanyu Ren, Xizheng Wang, Xiao Liu, Bowen Lv, Hanchen Zhang, Shudan Zhang, Hanyu Lai, Shuai Wang, Li Chen, Dan Li, Jie Tang",
-      "translated_title": "TideRL：通过就绪感知调度提升智能体强化学习吞吐量",
-      "translated_abstract": "用于大语言模型的强化学习正转向多轮智能体工作负载，在此场景下，rollout 任务反复因外部环境而暂停，随着上下文增加而恢复，并在高度可变的时间点完成。在这种情况下，以训练吞吐量衡量的强化学习训练吞吐量比原始 GPU 占用率更重要：GPU 等待和重复的预填充重计算是纯粹的开销。我们提出了 TideRL，一个具备连续任务批处理、资源感知的 Ref-Actor 流水线以及弹性资源扩展的就绪感知弹性强化学习系统。连续任务批处理保留了有用的 rollout 状态，资源感知流水线从就绪积压和到达间隔中选择解耦流式和协同聚合，弹性资源扩展则使用相同的就绪信号在 rollout 和训练之间移动 ranks。在纯文本和多模态智能体工作负载中，TideRL 将强化学习训练吞吐量比同步基线提高了 5.6 倍，比异步基线提高了 33% 以上，同时达到了相似的任务性能。它还将 KV 缓存命中率提高了 1.58 倍，将每步训练时间减少了 44.3%，并将总等待时间减少了 77.6%。",
+      "translated_title": "TideRL：通过就绪感知调度提升智能体强化学习 Goodput",
+      "translated_abstract": "用于大型语言模型的强化学习（RL）正转向多轮智能体工作负载，在这些工作负载中，rollout 任务反复暂停以等待外部环境，随着上下文不断增加而恢复，并在极不固定的时间完成。在这种情况下，以训练吞吐量衡量的 RL 训练 goodput 比原始 GPU 占用率更重要：GPU 等待和重复的预填充重计算是纯粹的开销。我们提出了 TideRL，这是一个具有连续任务批处理（CTB）、资源感知 Ref-Actor 流水线（RA²P）和弹性资源扩展（ERS）的就绪感知弹性 RL 系统。CTB 保留有用的 rollout 状态，RA²P 从就绪积压和到达间隔中选择解耦流和协同定位聚合，ERS 使用相同的就绪信号在 rollout 和训练之间移动 rank。在纯文本和多模态智能体工作负载中，与同步基线相比，TideRL 将 RL 训练 goodput 提高了最高 5.6 倍，与异步基线相比提高了超过 33%，同时达到了相似的任务性能。它还将 KV 缓存命中率提高了 1.58 倍，将每步训练时间减少了最高 44.3%，并将总等待时间减少了最高 77.6%。",
       "tag": "非产品相关",
       "topic_tags": [
-        "智能体",
         "强化学习",
+        "智能体",
         "训练系统",
         "加速"
       ],
@@ -32,15 +32,14 @@
       "arxiv_id": "2608.07641",
       "title": "SurveyReview: A Reviewer-Aligned Benchmark for Survey Evaluators",
       "authors": "Yuheng Zhang, Yuanchun Wang, Fanjin Zhang, Ruyu Zhao, Juanzi Li, Jie Tang, Jing Zhang",
-      "translated_title": "SurveyReview：面向综述评估器的评审对齐基准",
-      "translated_abstract": "大语言模型的快速发展将综述写作从长达数月的手工劳动转变为自动化过程。随着生成规模的扩大，可靠的评估成为瓶颈，大语言模型越来越多地被用作综述评估器。然而，现有方法主要依赖现成的大语言模型作为评判器，而没有与人类评审员进行系统性对齐，并且仍然缺乏量化与人类评审员对齐程度的系统框架。为了填补这一空白，我们提出了 SurveyReview，一个与评审员对齐、多维度的综述评估基准和数据集。我们收集并标注了 675 篇综述论文和 1630 份评审报告。我们通过将自由格式的评论转换为四维分数（可读性、批判性、全面性、结构）并配以支持性理由，来结构化真实的同行评审报告。我们进一步发布了标准化的训练/测试分割和评估协议，以衡量自动评估器与人类评审员之间的对齐程度。为了验证该基准，我们开发了 SurveyAlign，这是一个强大的基线评估器，通过在我们的标注数据上使用 LoRA 微调 Qwen3-32B 构建，并针对知识密集型维度增加了外部知识。在测试集上，SurveyAlign 与基于提示词的 GPT-5.2 评判相比，显著提高了评审对齐度，将所有四个维度的平均 MSE 从 2.28 降至 1.38，MAE 从 1.15 降至 0.69。我们的贡献有两方面：（1）我们建立了第一个具有可复现评估框架的多维度、评审员对齐数据集，用于综述评审；（2）我们开发了一个强大的基线评估器，显著提高了与人类评审员的对齐度，为未来的研究提供了有竞争力的参考。我们的代码和数据可在 https://surveyreview.github.io 获取",
+      "translated_title": "SurveyReview：面向综述评估器的审稿人对齐基准",
+      "translated_abstract": "大型语言模型的快速发展将综述写作从长达数月的手工劳动转变为自动化过程。随着生成规模的扩大，可靠的评估成为瓶颈，大型语言模型（LLM）越来越多地被用作综述评估器。然而，现有方法主要依赖现成的 LLM 作为评判器，而没有与人类审稿人进行系统性对齐，并且仍然缺乏量化与人类审稿人对齐程度的系统性框架。为了填补这一空白，我们提出了 SurveyReview，一个用于综述评估的审稿人对齐、多维度基准和数据集。我们收集并标注了 675 篇综述论文和 1,630 份审稿报告。我们通过将自由格式的评论转换为四维评分（可读性、批判性、全面性、结构）并配以支持性理由，来构建真实的同行评审报告。我们进一步发布了标准化的训练/测试拆分和评估协议，以衡量自动评估器与人类审稿人之间的对齐程度。为了验证该基准，我们开发了 SurveyAlign，这是一个强大的基线评估器，通过在我们的标注数据上使用 LoRA 微调 Qwen3-32B 构建，并利用外部知识增强以应对知识密集型维度。在测试集上，SurveyAlign 与基于提示词的 GPT-5.2 评判相比，显著提高了审稿人对齐度，将所有四个维度的平均 MSE 从 2.28 降至 1.38，MAE 从 1.15 降至 0.69。我们的贡献有两方面：（1）我们建立了第一个具有可复现评估框架的多维度、审稿人对齐数据集；（2）我们开发了一个强大的基线评估器，显著改善了与人类审稿人的对齐，为未来的研究提供了有竞争力的参考。",
       "tag": "非产品相关",
       "topic_tags": [
         "文本",
         "评测",
-        "微调",
-        "数据集",
-        "Benchmark"
+        "Benchmark",
+        "微调"
       ],
       "institutions": [
         "Renmin University of China"
@@ -55,8 +54,8 @@
       "arxiv_id": "2608.01460",
       "title": "Conformalized Large Language Models under Configuration Shift",
       "authors": "Yuqicheng Zhu, Jialin Yu, Lin Li, Gengyuan Zhang, Zhen Yang, Steffen Staab, Puneet Dokania, Philip Torr, Jie Tang, Evgeny Kharlamov",
-      "translated_title": "配置偏移下的保形大语言模型",
-      "translated_abstract": "保形预测是一个用于不确定性量化的无分布框架，最近被适配到大语言模型中，在可交换性下提供具有有限样本覆盖保证的预测集。然而对于大语言模型，非保形分数通常由推理流水线引起，而不仅仅是固定模型，这使得它们不仅取决于数据分布，还取决于提示词模板、解码参数和部署设置等可配置因素。由于这些配置在实践中经常被修改但很少被视为偏移源，它们对保形预测有效性的影响仍然知之甚少。我们将此称为“配置偏移”，并从提示词模板、解码温度和权重量化三个轴系统地研究它。在一项涵盖 9 个大语言模型、4 个数据集和 4 个非保形分数的广泛实证研究中，我们发现配置偏移会持续侵蚀保形预测的有效性，通常会将经验覆盖率推低至目标以下。相比之下，效率在很大程度上得到了保留：有效的预测集在大小上与独立同分布基线保持接近。我们推导出了覆盖率下界，将这种损失归因于校准和测试分数分布之间的差异，并使用它们的有限样本插件版本作为偏移严重程度的经验诊断。我们进一步表明，这些发现带来了实际的缓解措施：受边界启发的重新校正在有限的测试样本下是有效的，而脆弱感知的校准集成在没有测试数据的情况下恢复了大部分丢失的覆盖率。",
+      "translated_title": "配置偏移下的保形化大型语言模型",
+      "translated_abstract": "保形预测（CP）是一个用于不确定性量化的无分布框架，最近被适配到大型语言模型（LLM）中，在可交换性下提供具有有限样本覆盖保证的预测集。然而对于 LLM，非一致性分数通常由推理流水线引发，而不仅仅是固定的模型，这使得它们不仅取决于数据分布，还取决于可配置因素，如提示模板、解码参数和部署设置。由于这些配置在实践中经常被修改，但很少被视为偏移的来源，因此它们对 CP 有效性的影响仍然知之甚少。我们将其称为“配置偏移”，并从三个维度系统地研究它：提示模板、解码温度和权重量化。在一项涵盖 9 个 LLM、4 个数据集和 4 个非一致性分数的广泛实证研究中，我们发现配置偏移持续侵蚀 CP 的有效性，通常使经验覆盖率低于目标。相比之下，效率在很大程度上得到了保留：有效的预测集在大小上与独立同分布基线保持接近。我们推导出覆盖率下界，将这种损失归因于校准和测试分数分布之间的差异，并使用它们的有限样本插件版本作为偏移严重程度的经验诊断。我们进一步表明，这些发现带来了实际的缓解措施：受边界启发的重新校正在有限的测试样本下是有效的，而脆弱性感知的校准集成在没有测试数据的情况下恢复了大部分丢失的覆盖率。",
       "tag": "非产品相关",
       "topic_tags": [
         "模型",
@@ -74,14 +73,13 @@
       "arxiv_id": "2607.25380",
       "title": "Memory for Large Language Models",
       "authors": "Sining Zhoubian, Dan Zhang, Evgeny Kharlamov, Jie Tang",
-      "translated_title": "大语言模型的记忆",
-      "translated_abstract": "记忆已经演变成大语言模型的基础架构维度，从计算的隐式副产品转变为一系列显式、可控的机制。尽管最近的进展引入了多种策略——涵盖瞬时注意力、循环状态动态、参数高效适配和可扩展查找存储——但这种快速发展导致了高度碎片化的研究现状。在这篇综述中，我们提出了大语言模型中记忆的以架构为中心的系统性分类法。我们的框架沿着三个正交轴来刻画记忆：表示（隐式与显式）、更新动态（离线与在线）和持久性（短期与长期）。我们进一步形式化了决定记忆写入、路由、状态转换和合并的粒度机制。这种统一的视角阐明了计算耦合和独立可寻址记忆之间的概念边界，有效地弥合了不同的架构范式。此外，我们批判性地分析了混合记忆架构、系统级效率权衡和多维评估方法。通过将这些分散的进展整合成一个连贯的框架，本综述描绘了以记忆为中心的大语言模型设计的发展轨迹，并为未来在可扩展和自适应语言建模方面的创新提供了有原则的基础。",
+      "translated_title": "大型语言模型的记忆",
+      "translated_abstract": "在大型语言模型（LLM）中，记忆已经演变成一个基础性的架构维度，从计算的隐式副产品转变为一系列显式、可控的机制。尽管最近的进展引入了多种策略——涵盖瞬时注意力、循环状态动态、参数高效适配和可扩展查找存储——但这种快速发展导致了高度碎片化的研究现状。在这篇综述中，我们提出了一个以架构为中心的 LLM 记忆系统分类法。我们的框架沿着三个正交轴表征记忆：表示（隐式与显式）、更新动态（离线与在线）和持久性（短期与长期）。我们进一步形式化了决定记忆写入、路由、状态转换和合并的粒度机制。这种统一的视角阐明了计算耦合和独立可寻址记忆之间的概念边界，有效地弥合了不同的架构范式。此外，我们批判性地分析了混合记忆架构、系统级效率权衡和多维评估方法。通过将这些分散的进展整合到一个连贯的框架中，本综述描绘了以记忆为中心的 LLM 设计的发展轨迹，并为可扩展和自适应语言建模的未来创新提供了有原则的基础。",
       "tag": "非产品相关",
       "topic_tags": [
-        "文本",
         "模型",
-        "推理",
-        "综述"
+        "综述",
+        "推理系统"
       ],
       "institutions": [],
       "abstract": "Memory has evolved into a foundational architectural dimension in large language models (LLMs), shifting from an implicit byproduct of computation to a spectrum of explicit, controllable mechanisms. While recent advances introduce diverse strategies---spanning transient attention, recurrent state dynamics, parameter-efficient adaptations, and scalable lookup storage---this rapid evolution has led to a highly fragmented research landscape. In this survey, we present a systematic, architecture-centric taxonomy of memory in LLMs. Our framework characterizes memory along three orthogonal axes: representation (implicit versus explicit), update dynamics (offline versus online), and persistence (short-term versus long-term). We further formalize the granular mechanisms dictating memory writing, routing, state transitions, and consolidation. This unified perspective elucidates the conceptual boundaries between computation-coupled and independently addressable memory, effectively bridging disparate architectural paradigms. Additionally, we critically analyze hybrid memory architectures, system-level efficiency trade-offs, and multi-dimensional evaluation methodologies. By consolidating these scattered advancements into a cohesive framework, this survey charts the trajectory of memory-centric LLM design and provides a principled foundation for future innovations in scalable and adaptive language modeling.",
