@@ -1,26 +1,26 @@
 {
   "summary": {
-    "updated_at": "2026-08-21T08:40:52.746569+00:00",
+    "updated_at": "2026-08-21T08:42:57.459422+00:00",
     "final_count": 209,
     "product_related": 30,
     "product_support": 18,
     "academic_output": 161,
-    "new_papers": 2
+    "new_papers": 0
   },
   "rows": [
     {
       "arxiv_id": "2608.10402",
       "title": "TideRL: Boosting Agentic RL Goodput with Readiness-Aware Scheduling",
       "authors": "Yanyu Ren, Xizheng Wang, Xiao Liu, Bowen Lv, Hanchen Zhang, Shudan Zhang, Hanyu Lai, Shuai Wang, Li Chen, Dan Li, Jie Tang",
-      "translated_title": "TideRL：基于就绪感知调度的智能体强化学习吞吐量提升",
-      "translated_abstract": "针对大语言模型的强化学习正转向多轮智能体工作负载，其中展开任务会反复因外部环境而暂停，随着上下文不断增长而恢复，并在高度可变的时间点完成。在这种场景下，以训练吞吐量衡量的强化学习训练吞吐量比原始 GPU 占用率更为重要：GPU 等待和重复的预填充重计算纯属额外开销。我们提出了 TideRL，这是一个具备连续任务批处理、资源感知参考-Actor 流水线和弹性资源扩展的就绪感知弹性强化学习系统。连续任务批处理保留了有用的展开状态；资源感知参考-Actor 流水线根据就绪积压和到达间隔在解耦流式处理与同置聚合之间进行选择；弹性资源扩展利用相同的就绪信号在展开和训练之间移动秩。在纯文本和多模态智能体工作负载中，TideRL 将强化学习训练吞吐量比同步基线提高了 5.6 倍以上，比异步基线提高了 33% 以上，同时达到了相似的任务性能。它还将 KV 缓存命中率提高了 1.58 倍，将每步训练时间最多减少了 44.3%，并将总等待时间最多减少了 77.6%。",
+      "translated_title": "TideRL：通过就绪感知调度提升智能体强化学习有效吞吐量",
+      "translated_abstract": "针对大语言模型的强化学习正转向多轮智能体工作负载，在此场景下，滚动展开任务会因外部环境反复暂停，随着上下文不断增加而恢复，并在高度可变的时间点完成。在这种情况下，以训练吞吐量衡量的强化学习训练有效吞吐量比原始 GPU 占用率更重要：GPU 等待和重复的预填充重计算纯属额外开销。我们提出了 TideRL，这是一个具备就绪感知能力的弹性强化学习系统，包含连续任务批处理、资源感知的参考-Actor流水线以及弹性资源扩展三项技术。连续任务批处理保留了有用的滚动展开状态，资源感知的参考-Actor流水线根据就绪积压量和到达间隔在解耦流式处理与协同聚合之间进行选择，弹性资源扩展则利用相同的就绪信号在滚动展开和训练之间移动 ranks。在纯文本和多模态智能体工作负载上，与同步基线相比，TideRL 将强化学习训练有效吞吐量提升了最高 5.6 倍，与异步基线相比提升了超过 33%，同时达到了相似的任务性能。它还将 KV 缓存命中率提高了 1.58 倍，将每步训练时间最多减少了 44.3%，并将总等待时间最多减少了 77.6%。",
       "tag": "非产品相关",
       "topic_tags": [
         "强化学习",
-        "训练系统",
         "智能体",
+        "训练系统",
         "加速",
-        "多模态"
+        "推理系统"
       ],
       "institutions": [],
       "abstract": "Reinforcement learning (RL) for large language models is moving toward multi-turn agentic workloads, where rollout tasks repeatedly pause for external environments, resume with growing contexts, and finish at highly variable times. In this setting, RL training goodput, measured by training throughput, matters more than raw GPU occupancy: GPU waiting and repeated prefill recomputation are pure overhead. We present TideRL, a readiness-aware elastic RL system with Continuous Task Batching, Resource-Aware Ref-Actor Pipelining, and Elastic Resource Scaling. CTB preserves useful rollout state, $\\textrm{RA}^2\\textrm{P}$ selects between decoupled streaming and colocated aggregation from the ready backlog and arrival interval, and ERS moves ranks between rollout and training using the same readiness signals. Across text-only and multi-modal agentic workloads, TideRL improves RL training goodput by up to 5.6$\\times$ over synchronous baselines and over 33% over asynchronous baselines, while reaching similar task performance. It also improves KV cache hit rate by 1.58$\\times$, reduces per-step training time by up to 44.3%, and cuts total waiting time by up to 77.6%.",
@@ -33,8 +33,8 @@
       "arxiv_id": "2608.07641",
       "title": "SurveyReview: A Reviewer-Aligned Benchmark for Survey Evaluators",
       "authors": "Yuheng Zhang, Yuanchun Wang, Fanjin Zhang, Ruyu Zhao, Juanzi Li, Jie Tang, Jing Zhang",
-      "translated_title": "SurveyReview：面向综述评估器的审稿人对齐基准",
-      "translated_abstract": "大语言模型的快速发展将综述写作从长达数月的人工努力转变为自动化过程。随着生成规模的扩大，可靠的评估成为瓶颈，大语言模型越来越多地被用作综述评估器。然而，现有方法主要依赖现成的大语言模型作为评判方法，而没有与人类审稿人进行系统性对齐，并且仍然缺乏量化与人类审稿人对齐程度的系统性框架。为了填补这一空白，我们提出了 SurveyReview，这是一个面向综述评估的审稿人对齐、多维度基准和数据集。我们收集并标注了 675 篇综述论文和 1,630 份审稿报告。我们通过将自由形式的评论转换为四维分数（可读性、批判性、全面性、结构）并配以支持性理由，来构建真实的同行评审报告。我们进一步发布了标准化的训练/测试集划分和评估协议，以衡量自动评估器与人类审稿人之间的对齐程度。为了验证该基准，我们开发了 SurveyAlign，这是一个强大的基线评估器，通过在我们的标注数据上使用 LoRA 对 Qwen3-32B 进行微调，并针对知识密集型维度增加外部知识。在测试集上，SurveyAlign 相比使用 GPT-5.2 的基于提示的评判方法显著提高了审稿人对齐度，在所有四个维度上将平均 MSE 从 2.28 降至 1.38，MAE 从 1.15 降至 0.69。我们的贡献有两方面：（1）我们建立了首个多维度、审稿人对齐的数据集，并提供了可复现的综述评估框架；（2）我们开发了一个强大的基线评估器，显著提高了与人类审稿人的对齐度，为未来的研究提供了有竞争力的参考。",
+      "translated_title": "SurveyReview：面向综述评估器的审稿人对齐基准测试",
+      "translated_abstract": "大语言模型的快速发展将综述写作从长达数月的人工工作转变为自动化过程。随着生成规模的扩大，可靠的评估成为瓶颈，大语言模型越来越多地被用作综述评估器。然而，现有方法主要依赖现成的大语言模型作为评判方法，而没有与人类审稿人进行系统性对齐，并且仍然缺乏量化与人类审稿人对齐程度的系统性框架。为了填补这一空白，我们提出了 SurveyReview，这是一个面向综述评估的、与审稿人对齐的多维度基准测试和数据集。我们收集并标注了 675 篇综述论文和 1,630 份审稿报告。我们通过将自由格式的评论转换为四维评分（可读性、批判性、全面性、结构）并配以支持性理由，来构建真实的同行评审报告。我们进一步发布了标准化的训练/测试集划分和评估协议，以衡量自动评估器与人类审稿人之间的对齐程度。为了验证该基准测试，我们开发了 SurveyAlign，这是一个强大的基线评估器，通过在我们的标注数据上使用 LoRA 对 Qwen3-32B 进行微调，并针对知识密集型维度增加外部知识增强。在测试集上，与使用 GPT-5.2 进行基于提示的评判相比，SurveyAlign 显著提高了审稿人对齐度，在所有四个维度上将平均 MSE 从 2.28 降至 1.38，MAE 从 1.15 降至 0.69。我们的贡献有两方面：（1）我们建立了首个多维度、与审稿人对齐的数据集，并提供了可复现的综述评估框架；（2）我们开发了一个强大的基线评估器，显著提高了与人类审稿人的对齐度，为未来的研究提供了有竞争力的参考。",
       "tag": "非产品相关",
       "topic_tags": [
         "文本",
