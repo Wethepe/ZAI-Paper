@@ -93,27 +93,6 @@
       "arxiv_url": "https://arxiv.org/abs/2607.25380v1"
     },
     {
-      "arxiv_id": "2607.21893",
-      "title": "Fewer Paths, Better Performance: Understanding the ZCube Topology through Braess's Paradox",
-      "authors": "Li Chen",
-      "translated_title": "更少的路径，更好的性能：通过布雷斯悖论理解 ZCube 拓扑",
-      "translated_abstract": "数据中心网络遵循多路径原则：在端点之间提供许多路径，将流量哈希分布到这些路径上，并让冗余吸收故障和负载不平衡。ZCube 拓扑违背了这一原则。它移除了 Spine 层，消除了路径多重性，并削减了三分之一的交换硬件，但在大模型训练和推理方面都提供了更好的性能。我们通过其与布雷斯悖论的结构性联系来解释这一异常现象，该悖论最早在 1968 年被观察到：这两种现象都源于在竞争路径上进行拥塞无关的路由。布雷斯表明在这种情况下增加路径可能有害；ZCube 表明在相同条件下移除路径可能有益。首先，我们表明在结构化大语言模型流量下的多路径网络处于布雷斯的阴影中：静态 ECMP 哈希严格比贪婪路由更脆弱。贪婪路由在仿射延迟下达到最优值的 4/3 以内的平衡；静态哈希在最坏情况下允许无界的不平衡。其次，我们证明 ZCube 对布雷斯悖论免疫，并且其正交对偶分区可证明对于任意流量矩阵都能平衡负载；训练中的 AllReduce 和解耦推理中的 KV 缓存传输是两个推论。第三，我们量化了这种免疫的代价：ZCube 将微秒级的哈希恢复换成了毫秒级的控制平面恢复，这是大语言模型服务中的上层弹性所青睐的权衡。来自服务 GLM-5.1 代码推理的集群的生产测量报告称，网络成本降低了 33%，GPU 吞吐量提高了 15%，P99 首字时间降低了 40.6%。我们的分析表明，对于由模型结构驱动的工作负载，将拓扑与流量匹配比路径多重性更重要。",
-      "tag": "产品技术支持",
-      "topic_tags": [
-        "训练系统",
-        "推理系统",
-        "加速",
-        "部署",
-        "Infra"
-      ],
-      "institutions": [],
-      "abstract": "Datacenter networks follow a multipath doctrine: provision many paths between endpoints, hash flows across them, and let redundancy absorb both failures and load imbalance. The ZCube topology violates this doctrine. It removes the Spine layer, eliminates path multiplicity, and cuts one third of switching hardware, yet delivers better performance for both large model training and inference. We explain this anomaly through a structural connection to Braess's paradox, first observed in 1968: both phenomena trace to congestion-oblivious routing over competing paths. Braess showed that adding paths under this condition can hurt; ZCube shows that removing paths under the same condition can help. First, we show that multipath fabrics under structured LLM traffic operate in Braess's shadow: static ECMP hashing is strictly more fragile than greedy routing. Greedy routing reaches an equilibrium within 4/3 of optimal for affine latencies; static hashing admits unbounded imbalance in the worst case. Second, we prove that ZCube is immune to Braess's paradox and that its orthogonal dual partition provably balances load for arbitrary traffic matrices; AllReduce in training and KV cache transfers in disaggregated inference fall out as two corollaries. Third, we quantify the price of this immunity: ZCube trades microsecond hash recovery for millisecond control plane recovery, a trade that upper-layer resilience in LLM serving makes favorable. Production measurements from a cluster serving GLM-5.1 coding inference report 33% lower network cost, 15% higher GPU throughput, and 40.6% lower P99 time to first token. Our analysis suggests that for workloads driven by model structure, matching topology to traffic matters more than path multiplicity.",
-      "metadata_enriched": true,
-      "published": "2026-07-24",
-      "pdf_url": "https://arxiv.org/pdf/2607.21893v1",
-      "arxiv_url": "https://arxiv.org/abs/2607.21893v1"
-    },
-    {
       "arxiv_id": "2607.11185",
       "title": "SCALECUA: Scaling Computer Use Agents with Verifiable Task Synthesis and Efficient Online RL",
       "authors": "Bowen Lv, Xiao Liu, Yanyu Ren, Hanyu Lai, Bohao Jing, Hanchen Zhang, Yanxiao Zhao, Shuntian Yao, Jie Tang, Yuxiao Dong",
