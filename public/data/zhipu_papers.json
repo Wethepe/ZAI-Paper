@@ -1,11 +1,11 @@
 {
   "summary": {
-    "updated_at": "2026-10-12T06:44:27.343467+00:00",
+    "updated_at": "2026-10-13T07:12:42.231790+00:00",
     "final_count": 217,
     "product_related": 30,
     "product_support": 19,
     "academic_output": 168,
-    "new_papers": 1
+    "new_papers": 0
   },
   "rows": [
     {
@@ -13,14 +13,13 @@
       "title": "ReAT: Residual Action Tokenization for Autoregressive Robot Policies",
       "authors": "Dijia Zhan, Zhuo Li, Xuemiao Xu, Sun Zheng, Jinyi Li, Wenjun Wang, Jie Tang",
       "translated_title": "ReAT：用于自回归机器人策略的残差动作分词",
-      "translated_abstract": "自回归机器人策略依赖动作分词器将连续的动作块转换为紧凑的离散预测目标序列。现有的分词器可以从离散码本中重构动作块，但通常无法明确每个单独的 token 对重构动作的具体贡献。我们提出了残差动作分词，为每个 token 赋予了在优化当前动作重构中的明确角色。它使用解码后的重构作为反馈，从剩余的动作误差中构建下一个 token。这闭合了编码和解码之间的环路，使每个新 token 都能对实际解码前缀留下的误差做出响应。在跨越三个模拟 Benchmark 和真实世界设置的 19 个操作任务中，8-token 的 ReAT 策略在任务成功率上优于所有评估的基线；在 LIBERO 上，即使 4-token 的 ReAT 也以一半的 token 预算超越了所评估的 8-token 动作分词基线。这些结果表明了一条支持自我纠正策略学习的动作分词路径，帮助自回归策略学会逐步优化自身的动作计划。",
+      "translated_abstract": "自回归机器人策略依赖动作分词器将连续动作块转换为紧凑的离散预测目标序列。现有的分词器能够从离散码本重构动作块，但通常无法明确每个单独的 token 对重构动作的具体贡献。我们提出了残差动作分词，赋予每个 token 在优化当前动作重构中的明确角色。该方法使用解码后的重构结果作为反馈，从剩余的动作误差中构建下一个 token。这闭合了编码与解码之间的环路，使得每个新 token 都能响应实际解码前缀所遗留的误差。在跨越三个仿真 Benchmark 和真实世界设置的 19 个操作任务中，8-token 的 ReAT 策略在任务成功率上优于所有评估的基线；在 LIBERO 上，即便是 4-token 的 ReAT 也以一半的 token 预算超越了被评估的 8-token 动作分词基线。这些结果表明了一条支持自纠正策略学习的动作分词路径，帮助自回归策略学会逐步优化自身的动作规划。",
       "tag": "非产品相关",
       "topic_tags": [
         "智能体",
-        "强化学习",
+        "推理",
         "模型",
-        "加速",
-        "部署"
+        "强化学习"
       ],
       "institutions": [],
       "abstract": "Autoregressive robot policies rely on action tokenizers to convert continuous action chunks into compact sequences of discrete prediction targets. Existing tokenizers can reconstruct action chunks from discrete codes, but often leave implicit what each individual token contributes to the reconstructed action. We introduce Residual Action Tokenization (ReAT), which gives each token an explicit role in refining the current action reconstruction. It uses the decoded reconstruction as feedback to construct the next token from the remaining action error. This closes the loop between encoding and decoding, making each new token responsive to the errors left by the actual decoded prefix. Across 19 manipulation tasks spanning three simulation benchmarks and real-world settings, 8-token ReAT policies outperform the evaluated baselines in task success; on LIBERO, even 4-token ReAT surpasses the evaluated 8-token action-tokenization baselines at half the token budget. These results suggest a path toward action tokenization that supports self-corrective policy learning, helping autoregressive policies learn to progressively refine their own action plans.",
@@ -54,14 +53,13 @@
       "title": "GFD-OPD: Guidance-Folded On-Policy Distillation of Diffusion Models Across Scales",
       "authors": "Zhenxing Zhang, Jiayan Teng, Wenxu Wu, Zhuoyi Yang, Jiazheng Xu, Wendi Zheng, Jie Tang, Dan Guo, Meng Wang",
       "translated_title": "GFD-OPD：跨尺度扩散模型的引导折叠在线策略蒸馏",
-      "translated_abstract": "在线策略蒸馏在语言模型中展示了两项重要能力：将大型教师模型压缩为更小的学生模型，以及将专家模型合并为单个模型。然而，现有的扩散 OPD 大多关注后者，即教师和学生共享相同的骨干网络和规模。我们研究了从大型教师模型到小型学生模型的大到小扩散 OPD，并发现标准方案会失败。为了找到潜在原因，我们提出了 Fixed-State KL，这是一种有效且公平的方法，用于测量扩散模型 OPD 训练期间学生和教师之间的分布差距。我们首次阐明了大到小 OPD 对扩散模型具有挑战性的原因：较小的学生模型难以完美匹配较大教师模型的分布，而无分类器引导会累积并放大学生的条件分支和无条件分支与教师之间的分布差异。为了解决这个问题，我们提出了 GFD-OPD，这是一种简单而有效的方法，可缩小学生与教师之间的差距，同时避免 CFG 组合的误差放大。在大量实验中，GFD 在训练效率和最终性能上均优于以前的基线，在所有 Benchmark 上取得了最优结果。",
+      "translated_abstract": "在线策略蒸馏（OPD）在语言模型中展示了两项重要能力：将大型教师模型压缩为更小的学生模型，以及将专家模型合并为单一模型。然而，现有的扩散模型 OPD 大多关注后者，即教师和学生共享相同的骨干网络和规模。我们研究了从大型教师模型到小型学生模型的大到小扩散 OPD，并发现标准方案会失败。为了寻找根本原因，我们提出了 Fixed-State KL，这是一种在扩散模型的 OPD 训练期间衡量学生与教师之间分布差距的有效且公平的方法。我们首次阐明了大到小 OPD 对扩散模型具有挑战性的原因：较小的学生模型难以完美匹配较大教师模型的分布，而无分类器引导（CFG）会累积并放大学生条件分支和无条件分支与教师之间的分布差异。为了解决这个问题，我们提出了 GFD-OPD，这是一种简单而有效的方法，能够缩小师生差距，同时避免 CFG 组合的误差放大。在大量实验中，GFD 在训练效率和最终性能上均优于先前的基线，在所有 Benchmark 上取得了最优结果。",
       "tag": "非产品相关",
       "topic_tags": [
         "多模态",
         "生成",
         "蒸馏",
-        "训练系统",
-        "Benchmark"
+        "模型"
       ],
       "institutions": [
         "Tsinghua University"
