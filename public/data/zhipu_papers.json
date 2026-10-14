@@ -1,6 +1,6 @@
 {
   "summary": {
-    "updated_at": "2026-10-13T07:12:42.231790+00:00",
+    "updated_at": "2026-10-14T05:36:22.782000+00:00",
     "final_count": 217,
     "product_related": 30,
     "product_support": 19,
@@ -25,8 +25,8 @@
       "abstract": "Autoregressive robot policies rely on action tokenizers to convert continuous action chunks into compact sequences of discrete prediction targets. Existing tokenizers can reconstruct action chunks from discrete codes, but often leave implicit what each individual token contributes to the reconstructed action. We introduce Residual Action Tokenization (ReAT), which gives each token an explicit role in refining the current action reconstruction. It uses the decoded reconstruction as feedback to construct the next token from the remaining action error. This closes the loop between encoding and decoding, making each new token responsive to the errors left by the actual decoded prefix. Across 19 manipulation tasks spanning three simulation benchmarks and real-world settings, 8-token ReAT policies outperform the evaluated baselines in task success; on LIBERO, even 4-token ReAT surpasses the evaluated 8-token action-tokenization baselines at half the token budget. These results suggest a path toward action tokenization that supports self-corrective policy learning, helping autoregressive policies learn to progressively refine their own action plans.",
       "metadata_enriched": true,
       "published": "2026-10-09",
-      "pdf_url": "https://arxiv.org/pdf/2610.13093v1",
-      "arxiv_url": "https://arxiv.org/abs/2610.13093v1"
+      "pdf_url": "https://arxiv.org/pdf/2610.13093v2",
+      "arxiv_url": "https://arxiv.org/abs/2610.13093v2"
     },
     {
       "arxiv_id": "2609.39903",
